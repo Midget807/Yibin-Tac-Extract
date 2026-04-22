@@ -1,0 +1,1 @@
+execute at @a[x=-102, y=-33, z=83, dx=3, dy=1, dz=-2] run say cave extraction
