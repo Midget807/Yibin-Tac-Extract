@@ -31,6 +31,7 @@ kill @e[type=minecraft:armor_stand, tag=RedTeamMapDeploy]
 execute as @a[team=red] if score @s inDeployBox matches 1 if score #red deploySeconds matches 0 run tag @s remove UnableToTp
 
 #Checks if they have been able to tp
+execute as @a[team=red] if score @s inDeployBox matches 1 if score #red deploySeconds matches 0 run scoreboard players set @s inMap 1
 execute as @a[team=red] if score @s inDeployBox matches 1 if score #red deploySeconds matches 0 if score @s inMap matches 1 run tag @s add UnableToTp
 execute as @a[team=red] if score @s inDeployBox matches 1 if score #red deploySeconds matches 0 if score @s inMap matches 1 run scoreboard players set @s inMap 0
 
@@ -39,4 +40,3 @@ execute as @a[team=red, tag=!UnableToTp] if score @s inDeployBox matches 1 if sc
 execute as @a[team=red, tag=!UnableToTp] if score @s inDeployBox matches 1 if score #red deploySeconds matches 0 run effect give @s blindness 1 10 true
 execute as @a[team=red, tag=!UnableToTp] if score @s inDeployBox matches 1 if score #red deploySeconds matches 0 at @s run playsound minecraft:entity.evoker.prepare_summon master @a ~ ~ ~ 0.5 1
 execute as @a[team=red, tag=!UnableToTp] if score @s inDeployBox matches 1 if score #red deploySeconds matches 0 run title @s actionbar [{"text":"YOU HAVE BEEN DEPLOYED","color":"red","bold":true}]
-execute as @a[team=red, tag=!UnableToTp] if score @s inDeployBox matches 1 if score #red deploySeconds matches 0 run scoreboard players set @s inMap 1
