@@ -31,3 +31,4 @@ summon minecraft:armor_stand -143 60 -64 {Invulnerable:1b, NoGravity:1b, Invisib
 summon minecraft:armor_stand -131 60 -64 {Invulnerable:1b, NoGravity:1b, Invisible:1b, Tags:["MapDeployZone", "Tunnel"]}
 summon minecraft:armor_stand -119 60 -64 {Invulnerable:1b, NoGravity:1b, Invisible:1b, Tags:["MapDeployZone", "Shaft"]}
 summon minecraft:armor_stand -103 60 -64 {Invulnerable:1b, NoGravity:1b, Invisible:1b, Tags:["MapDeployZone", "Abandoned"]}
+scoreboard players add @e[type=minecraft:armor_stand, tag=MapDeployZone] safeMapDeployZones 0
