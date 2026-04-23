@@ -24,8 +24,8 @@ execute as @a[team=red] if score @s isDeploying matches 1 unless score #red depl
 execute as @a[team=red] if score @s isDeploying matches 1 unless score #red deploySeconds = #red extractSecondsLS at @s run playsound minecraft:block.lever.click master @a ~ ~ ~ 0.7 1.6
 execute as @a[team=red] if score @s isDeploying matches 1 unless score #red deploySeconds = #red extractSecondsLS run scoreboard players operation #red extractSecondsLS = #red deploySeconds 
 
-#successful deploy
-execute as @a[team=red] if score @s inDeployBox matches 1 if score #red deploySeconds matches 0 at @e[type=armor_stand,tag=DeployZone,scores={safeMapDeployZones=1},sort=random,limit=1] run tp @s ~ ~ ~
+#attempt to deploy
+execute as @a[team=red] if score @s inDeployBox matches 1 if score #red deploySeconds matches 0 at @e[type=armor_stand,tag=MapDeployZone,scores={safeMapDeployZones=1},sort=random,limit=1] run tp @s ~ ~3 ~
 
 #effects and feedback on scucessful deploy
 execute as @a[team=red] if score @s inDeployBox matches 1 if score #red deploySeconds matches 0 run scoreboard players set @s isDeploying 0
