@@ -1,10 +1,11 @@
 #set isdeploying if in the deploy box
-execute as @a[team=red] unless score @s inDeployBox matches 1 run scoreboard players set @s isDeploying 0
+# execute as @a[team=red] unless score @s inDeployBox matches 1 run scoreboard players set @s isDeploying 0
 execute as @a[team=red] if score @s inDeployBox matches 1 run scoreboard players set @s isDeploying 1
 scoreboard players set #red isDeploying 0
 execute as @a[team=red] if score @s isDeploying matches 1 run scoreboard players set #red isDeploying 1
 
 #tick timer
+execute unless score #red isDeploying matches 1 run scoreboard players operation #red extractSecondsLS = #ticksToDeploy constants
 execute unless score #red isDeploying matches 1 run scoreboard players operation #red deployTicks = #ticksToDeploy constants
 execute if score #red isDeploying matches 1 run scoreboard players remove #red deployTicks 1 
 
@@ -14,7 +15,13 @@ scoreboard players operation #red deploySecondsB /= #20 constants
 scoreboard players operation #red deploySeconds = #red deploySecondsB  
 
 #handle if players step off the deploy zone
+execute as @a[team=red] if score @s isDeploying matches 1 unless score @s inDeployBox matches 1 run title @s actionbar [{"text":"DEPLOYMENT CANCELLED","color":"yellow","bold":true}]
+execute as @a[team=red] if score @s isDeploying matches 1 unless score @s inDeployBox matches 1 at @s run playsound create:cardboard_bonk master @s ~ ~ ~ 0.7 0.8
+execute as @a[team=red] if score @s isDeploying matches 1 unless score @s inDeployBox matches 1 run scoreboard players set @s isDeploying 0
 
+#deployment countdown feedback
+execute as @a[team=red] if score @s isDeploying matches 1 if score #red isDeploying matches 1 run title @s actionbar [{"text":"DEPLOYING IN ","extra":[{"score":{"name":"#red","objective":"deploySeconds"}}]}]
+execute as @a[team=red] if score @s inDeployBox matches 1 unless score #red deploySeconds = #red extractSecondsLS run execute at @s run playsound minecraft:block.lever.click master @a ~ ~ ~ 0.7 1.6
+execute as @a[team=red] if score @s inDeployBox matches 1 unless score #red deploySeconds = #red extractSecondsLS run scoreboard players operation #red extractSecondsLS = #red deploySeconds 
 
 #Deployment feedback
-execute as @a[team=red] if score @s isDeploying matches 1 if score #red isDeploying matches 1 run title @s actionbar [{"text":"DEPLOYING IN ","extra":[{"score":{"name":"#red","objective":"deploySeconds"}}]}]
