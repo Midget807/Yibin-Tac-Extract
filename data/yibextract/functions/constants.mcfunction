@@ -2,7 +2,7 @@ scoreboard objectives add constants dummy
 
 #secondsToExtract and secondsToDeploy should be one higher than what you want it to be since division rounds down
 scoreboard players set #secondsToExtract constants 4
-scoreboard players set #secondsToDeploy constants 11
+scoreboard players set #secondsToDeploy constants 4
 
 scoreboard players set #20 constants 20
 scoreboard players set #9 constants 9

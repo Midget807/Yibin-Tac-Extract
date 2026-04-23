@@ -28,6 +28,6 @@ execute as @a if score @s extractSeconds matches 0 run scoreboard players operat
 execute as @a if score @s extractSeconds matches 0 run effect give @s minecraft:blindness 2 2 true
 execute as @a if score @s extractSeconds matches 0 run effect give @s minecraft:slowness 1 1 true
 execute as @a if score @s extractSeconds matches 0 run title @s actionbar [{"text":"EXTRACTED SUCCESSFULLY","color":"green","bold":true}]
-execute as @a if score @s extractSeconds matches 0 at @s run playsound minecraft:ui.toast.challenge_complete master @s ~ ~ ~ 0.7 0.8
+execute as @a if score @s extractSeconds matches 0 at @s run playsound minecraft:ui.toast.challenge_complete master @s ~ ~ ~ 0.4 0.8
 
 function yibextract:extraction/backtobase
