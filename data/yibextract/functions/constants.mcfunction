@@ -19,3 +19,4 @@ scoreboard players operation #ticksToDeploy constants = #buffer constants
 
 #used for both extraction and deployment so it goes here 
 scoreboard objectives add inMap dummy
+scoreboard players add @a inMap 0

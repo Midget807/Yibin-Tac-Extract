@@ -25,7 +25,10 @@ execute as @a[team=red] if score @s isDeploying matches 1 unless score #red depl
 execute as @a[team=red] if score @s isDeploying matches 1 unless score #red deploySeconds = #red extractSecondsLS run scoreboard players operation #red extractSecondsLS = #red deploySeconds 
 
 #attempt to deploy
-execute as @a[team=red] if score @s inDeployBox matches 1 if score #red deploySeconds matches 0 at @e[type=armor_stand,tag=MapDeployZone,scores={safeMapDeployZones=1},sort=random,limit=1] run tp @s ~ ~3 ~
+execute at @e[type=armor_stand,tag=MapDeployZone,scores={safeMapDeployZones=1},sort=random,limit=1] run summon minecraft:armor_stand ~ ~3 ~ {Invulnerable:1b, NoGravity:1b, Invisible:1b, Tags:["RedTeamMapDeploy"]}
+execute as @a[team=red, limit=1] if score @s inDeployBox matches 1 if score #red deploySeconds matches 0 at @e[type=minecraft:armor_stand, tag=RedTeamMapDeploy] run tp @s ~ ~ ~
+kill @e[type=minecraft:armor_stand, tag=RedTeamMapDeploy]
+
 
 #effects and feedback on scucessful deploy
 execute as @a[team=red] if score @s inDeployBox matches 1 if score #red deploySeconds matches 0 run scoreboard players set @s isDeploying 0
@@ -33,3 +36,6 @@ execute as @a[team=red] if score @s inDeployBox matches 1 if score #red deploySe
 execute as @a[team=red] if score @s inDeployBox matches 1 if score #red deploySeconds matches 0 at @s run playsound minecraft:entity.evoker.prepare_summon master @a ~ ~ ~ 0.5 1
 execute as @a[team=red] if score @s inDeployBox matches 1 if score #red deploySeconds matches 0 run title @s actionbar [{"text":"YOU HAVE BEEN DEPLOYED","color":"red","bold":true}]
 execute as @a[team=red] if score @s inDeployBox matches 1 if score #red deploySeconds matches 0 run scoreboard players set @s inMap 1
+
+#Checks if they have been able to tp
+execute as @a[team=red] if score @s inDeployBox matches 1 if score #red deploySeconds matches 0 if score @s inMap matches 1 run scoreboard players set @s inMap 0
