@@ -26,7 +26,7 @@ execute as @a[team=red] if score @s isDeploying matches 1 unless score #red depl
 
 #attempt to deploy
 execute as @a[team=red, limit=1] if score @s inDeployBox matches 1 if score #red deploySeconds matches 0 at @e[type=armor_stand,tag=MapDeployZone,scores={safeMapDeployZones=1},sort=random,limit=1] run summon minecraft:armor_stand ~ ~3 ~ {Invulnerable:1b, NoGravity:1b, Invisible:1b, Tags:["RedTeamMapDeploy"]}
-execute as @a[team=red, limit=1] if score @s inDeployBox matches 1 if score #red deploySeconds matches 0 at @e[type=minecraft:armor_stand, tag=RedTeamMapDeploy] run tp @s ~ ~ ~
+execute as @a[team=red] if score @s inDeployBox matches 1 if score #red deploySeconds matches 0 at @e[type=minecraft:armor_stand, tag=RedTeamMapDeploy] run tp @s ~ ~ ~
 kill @e[type=minecraft:armor_stand, tag=RedTeamMapDeploy]
 
 
