@@ -10,3 +10,7 @@ function yibextract:deployment/shittyrng
 function yibextract:deployment/deployzones
 function yibextract:deployment/deployment
 function yibextract:deployment/check_deploy_zone_safe
+
+#gtfo
+
+function yibextract:gtfo/update

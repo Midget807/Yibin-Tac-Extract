@@ -25,6 +25,7 @@ execute as @a if score @s inExtractBox matches 1 unless score @s extractSeconds 
 execute as @a if score @s extractSeconds matches 0 run scoreboard players set @s inMap 0
 execute as @a if score @s extractSeconds matches 0 run scoreboard players set @s isExtracting 0
 execute as @a if score @s extractSeconds matches 0 run scoreboard players operation @s extractSecondsLS = #secondsToExtract constants
+execute as @a if score @s extractSeconds matches 0 run effect clear @s 
 execute as @a if score @s extractSeconds matches 0 run effect give @s minecraft:blindness 2 2 true
 execute as @a if score @s extractSeconds matches 0 run effect give @s minecraft:slowness 1 1 true
 execute as @a if score @s extractSeconds matches 0 run title @s actionbar [{"text":"EXTRACTED SUCCESSFULLY","color":"green","bold":true}]

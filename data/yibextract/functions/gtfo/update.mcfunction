@@ -1,0 +1,58 @@
+execute if score #active gtfo matches 1 run scoreboard players remove #countdown gtfo 1
+
+execute as @a at @s if score #countdown gtfo matches 5999 run playsound minecraft:entity.evoker.prepare_summon master @s ~ ~ ~ 5 0.7
+
+#yes, i hardcoded all of it :)
+execute if score #countdown gtfo matches 4800 run execute as @a at @s run playsound minecraft:block.bell.use master @a ~ ~ ~ 1 0.5
+execute if score #countdown gtfo matches 4800 run tellraw @a ["",{"text":"\u26a0 [G.T.F.O] ","bold":true,"color":"yellow"},{"text":"Drone strike in 4 minutes.","color":"yellow"}]
+
+execute if score #countdown gtfo matches 4780 run execute as @a at @s run playsound minecraft:block.note_block.hat master @a ~ ~ ~ 0.5 0.5
+execute if score #countdown gtfo matches 4760 run execute as @a at @s run playsound minecraft:block.note_block.hat master @a ~ ~ ~ 0.5 0.5
+execute if score #countdown gtfo matches 4740 run execute as @a at @s run playsound minecraft:block.note_block.hat master @a ~ ~ ~ 0.5 0.5
+
+execute if score #countdown gtfo matches 3600 run execute as @a at @s run playsound minecraft:block.bell.use master @a ~ ~ ~ 1 0.5
+execute if score #countdown gtfo matches 3600 run tellraw @a ["",{"text":"\u26a0 [G.T.F.O] ","bold":true,"color":"yellow"},{"text":"Drone strike in 3 minutes.","color":"gold"}]
+
+execute if score #countdown gtfo matches 3580 run execute as @a at @s run playsound minecraft:block.note_block.hat master @a ~ ~ ~ 0.5 0.5
+execute if score #countdown gtfo matches 3560 run execute as @a at @s run playsound minecraft:block.note_block.hat master @a ~ ~ ~ 0.5 0.5
+execute if score #countdown gtfo matches 3540 run execute as @a at @s run playsound minecraft:block.note_block.hat master @a ~ ~ ~ 0.5 0.5
+
+execute if score #countdown gtfo matches 2400 run execute as @a at @s run playsound minecraft:block.bell.use master @a ~ ~ ~ 1 0.5
+execute if score #countdown gtfo matches 2400 run tellraw @a ["",{"text":"\u26a0 [G.T.F.O] ","bold":true,"color":"yellow"},{"text":"Drone strike in 2 minutes.","color":"red"}]
+
+execute if score #countdown gtfo matches 2380 run execute as @a at @s run playsound minecraft:block.note_block.hat master @a ~ ~ ~ 0.5 0.5
+execute if score #countdown gtfo matches 2360 run execute as @a at @s run playsound minecraft:block.note_block.hat master @a ~ ~ ~ 0.5 0.5
+execute if score #countdown gtfo matches 2340 run execute as @a at @s run playsound minecraft:block.note_block.hat master @a ~ ~ ~ 0.5 0.5
+
+execute if score #countdown gtfo matches 1200 run execute as @a at @s run playsound minecraft:block.bell.use master @a ~ ~ ~ 1 0.5
+execute if score #countdown gtfo matches 1200 run tellraw @a ["",{"text":"\u26a0 [G.T.F.O] ","bold":true,"color":"yellow"},{"text":"Drone strike in 1 minute.","color":"dark_red"}]
+
+execute if score #countdown gtfo matches 1180 run execute as @a at @s run playsound minecraft:block.note_block.hat master @a ~ ~ ~ 0.5 0.5
+execute if score #countdown gtfo matches 1160 run execute as @a at @s run playsound minecraft:block.note_block.hat master @a ~ ~ ~ 0.5 0.5
+execute if score #countdown gtfo matches 1140 run execute as @a at @s run playsound minecraft:block.note_block.hat master @a ~ ~ ~ 0.5 0.5
+
+execute if score #countdown gtfo matches 400 run tellraw @a ["",{"text":"\u26a0 [G.T.F.O] ","bold":true,"color":"yellow"},{"text":"DRONE STRIKE IMMINENT.","color":"dark_red","bold":true}]
+
+execute if score #countdown gtfo matches 400 run execute as @a at @s run playsound minecraft:block.bell.use master @a ~ ~ ~ 1 0.5
+
+execute if score #countdown gtfo matches 200 as @a[gamemode=adventure] if score @s inMap matches 1 run effect give @s blindness 30 1 true
+execute if score #countdown gtfo matches 200 as @a[gamemode=adventure] if score @s inMap matches 1 run effect give @s slowness 30 10 true
+execute if score #countdown gtfo matches 100 as @a[gamemode=adventure] if score @s inMap matches 1 run effect give @s wither 30 3 true
+
+#sfx baby
+execute if score #countdown gtfo matches 290 as @a[gamemode=adventure] if score @s inMap matches 1 run execute as @s at @s run playsound minecraft:entity.ender_dragon.death master @s ~ ~ ~ 0.2 0.5 
+execute if score #countdown gtfo matches 260 as @a[gamemode=adventure] if score @s inMap matches 1 run execute as @s at @s run playsound minecraft:entity.ender_dragon.death master @s ~ ~ ~ 0.5 0.7 
+execute if score #countdown gtfo matches 240 as @a[gamemode=adventure] if score @s inMap matches 1 run execute as @s at @s run playsound minecraft:entity.ender_dragon.death master @s ~ ~ ~ 1 0.65 
+execute if score #countdown gtfo matches 220 as @a[gamemode=adventure] if score @s inMap matches 1 run execute as @s at @s run playsound minecraft:entity.ender_dragon.death master @s ~ ~ ~ 10 0.6 
+
+execute if score #countdown gtfo matches 62 as @a[gamemode=adventure] if score @s inMap matches 1 run execute as @s at @s run playsound survival_instinct:explote_molotov master @s ~ ~ ~ 5 0.9 
+execute if score #countdown gtfo matches 40 as @a[gamemode=adventure] if score @s inMap matches 1 run execute as @s at @s run playsound survival_instinct:explote_molotov master @s ~ ~ ~ 5 1 
+execute if score #countdown gtfo matches 25 as @a[gamemode=adventure] if score @s inMap matches 1 run execute as @s at @s run playsound survival_instinct:explote_molotov master @s ~ ~ ~ 5 0.7 
+execute if score #countdown gtfo matches 8 as @a[gamemode=adventure] if score @s inMap matches 1 run execute as @s at @s run playsound survival_instinct:explote_molotov master @s ~ ~ ~ 5 0.9 
+execute if score #countdown gtfo matches -17 as @a[gamemode=adventure] if score @s inMap matches 1 run execute as @s at @s run playsound survival_instinct:explote_molotov master @s ~ ~ ~ 5 0.8 
+
+execute if score #countdown gtfo matches -20 as @a[gamemode=adventure] if score @s inMap matches 1 run kill @s
+
+#reset
+execute if score #countdown gtfo matches -100 run scoreboard players set #active gtfo 0
+execute if score #countdown gtfo matches -100 run scoreboard players set #countdown gtfo 6000
