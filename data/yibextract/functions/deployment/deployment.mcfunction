@@ -10,9 +10,9 @@ execute unless score #red isDeploying matches 1 run scoreboard players operation
 execute if score #red isDeploying matches 1 run scoreboard players remove #red deployTicks 1 
 
 #convert to seconds (heck you i can't be assed learning how to schedule stuff)
-scoreboard players operation #red deploySecondsB = #red deployTicks  
-scoreboard players operation #red deploySecondsB /= #20 constants  
-scoreboard players operation #red deploySeconds = #red deploySecondsB  
+scoreboard players operation #red deploySecondsB = #red deployTicks 
+scoreboard players operation #red deploySecondsB /= #20 constants 
+scoreboard players operation #red deploySeconds = #red deploySecondsB 
 
 #handle if players step off the deploy zone
 execute as @a[team=red] if score @s isDeploying matches 1 unless score @s inDeployBox matches 1 run title @s actionbar [{"text":"DEPLOYMENT CANCELLED","color":"yellow","bold":true}]
