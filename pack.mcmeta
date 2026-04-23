@@ -1,6 +1,6 @@
 {
-  "pack": {
-    "description": "Main Datapack for Yibin's Tactical Extractor",
-    "pack_format": 15
-  }
+	"pack": {
+		"pack_format": 15,
+		"description": "custom datapack for yibin's grim extraction shoot aaaaAAA er"
+	}
 }
