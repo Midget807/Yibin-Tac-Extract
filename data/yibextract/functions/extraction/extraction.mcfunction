@@ -1,5 +1,5 @@
 # set isExtracting to 1 if player is in box and in map
-execute as @a if score @s inExtractBox matches 1 unless score @s isExtracting matches 1 run scoreboard players set @s isExtracting 1
+execute as @a if score @s inExtractBox matches 1 unless score @s isExtracting matches 1 if score @s inMap matches 1 run scoreboard players set @s isExtracting 1
 
 # if the player leaves the box
 execute as @a if score @s isExtracting matches 1 unless score @s inExtractBox matches 1 if score @s inMap matches 1 run execute at @s run playsound create:cardboard_bonk master @s ~ ~ ~ 1 0.8
@@ -29,5 +29,3 @@ execute as @a if score @s extractSeconds matches 0 run effect give @s minecraft:
 execute as @a if score @s extractSeconds matches 0 run effect give @s minecraft:slowness 1 1 true
 execute as @a if score @s extractSeconds matches 0 run title @s actionbar [{"text":"EXTRACTED SUCCESSFULLY","color":"green","bold":true}]
 execute as @a if score @s extractSeconds matches 0 at @s run playsound minecraft:ui.toast.challenge_complete master @s ~ ~ ~ 0.4 0.8
-
-function yibextract:extraction/backtobase
