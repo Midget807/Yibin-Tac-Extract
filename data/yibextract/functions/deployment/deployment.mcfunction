@@ -26,6 +26,8 @@ execute as @a[team=red] if score @s isDeploying matches 1 unless score #red depl
 
 #successful deploy
 execute as @a[team=red] if score @s inDeployBox matches 1 if score #red deploySeconds matches 0 at @e[type=armor_stand,tag=DeployZone,scores={safeMapDeployZones=1},sort=random,limit=1] run tp @s ~ ~ ~
+
+#effects and feedback on scucessful deploy
 execute as @a[team=red] if score @s inDeployBox matches 1 if score #red deploySeconds matches 0 run scoreboard players set @s isDeploying 0
 execute as @a[team=red] if score @s inDeployBox matches 1 if score #red deploySeconds matches 0 run effect give @s blindness 1 10 true
 execute as @a[team=red] if score @s inDeployBox matches 1 if score #red deploySeconds matches 0 at @s run playsound minecraft:entity.evoker.prepare_summon master @a ~ ~ ~ 0.5 1
