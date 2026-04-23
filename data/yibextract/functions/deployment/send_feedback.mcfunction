@@ -6,4 +6,4 @@ execute as @a[team=red, tag=!UnableToTp] if score @s inDeployBox matches 1 if sc
 execute as @a[team=red, tag=!UnableToTp] if score @s inDeployBox matches 1 if score #red deploySeconds matches 0 run scoreboard players set @s inMap 1
 
 #error message for those unable to tp
-execute as @a[tag=UnableToTp] run tellraw @s {"text":"ERROR: NO VALID SPAWNPOINTS (hold on, this should fix itself)","color":"red"} 
+execute as @a[tag=UnableToTp] if score @s inDeployBox matches 1 run tellraw @s {"text":"ERROR: NO VALID SPAWNPOINTS (hold on, this should fix itself)","color":"red"} 
