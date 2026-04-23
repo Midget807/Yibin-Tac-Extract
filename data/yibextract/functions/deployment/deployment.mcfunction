@@ -7,7 +7,7 @@ execute as @a[team=red] if score @s isDeploying matches 1 run scoreboard players
 #tick timer
 execute unless score #red isDeploying matches 1 run scoreboard players operation #red extractSecondsLS = #ticksToDeploy constants
 execute unless score #red isDeploying matches 1 run scoreboard players operation #red deployTicks = #ticksToDeploy constants
-execute if score #red isDeploying matches 1 run scoreboard players remove #red deployTicks 1 
+execute if score #red isDeploying matches 1 unless score #red deployTicks matches ..0 run scoreboard players remove #red deployTicks 1 
 
 #convert to seconds (heck you i can't be assed learning how to schedule stuff)
 scoreboard players operation #red deploySecondsB = #red deployTicks 
