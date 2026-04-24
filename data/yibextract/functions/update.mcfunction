@@ -14,3 +14,8 @@ function yibextract:deployment/check_deploy_zone_safe
 #gtfo
 
 execute if score #active gtfo matches 1 run function yibextract:gtfo/update
+
+# inMap
+
+function yibextract:inmap/spawnpoints
+function yibextract:inmap/enforce_inmap

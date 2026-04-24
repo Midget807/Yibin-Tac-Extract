@@ -6,6 +6,7 @@ execute if score #state openExtractZones matches 3 run tellraw @a ["",{"text":"-
 execute unless score #state openExtractZones matches 5 run schedule function yibextract:panel/close_mall_extraction 60s
 execute unless score #state openExtractZones matches 5 run schedule function yibextract:panel/open_sewers_extraction 60s
 execute unless score #state openExtractZones matches 5 run schedule function yibextract:panel/open_cave_extraction 60s
+execute unless score #state openExtractZones matches 5 as @a at @a run playsound minecraft:block.note_block.bass master @s ~ ~ ~ 1 1
 
 #if the configuration is unknown, just open the zones now.   
 execute if score #state openExtractZones matches 5 run function yibextract:panel/close_mall_extraction
