@@ -8,6 +8,7 @@ scoreboard players set #20 constants 20
 scoreboard players set #9 constants 9
 scoreboard players set #18 constants 18
 scoreboard players set #3 constants 3
+scoreboard players set #1 constants 1
 
 #derive ticksToExtract from secondsToExtract
 scoreboard players operation #buffer constants = #secondsToExtract constants
