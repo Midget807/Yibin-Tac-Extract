@@ -1,0 +1,8 @@
+function yibextract:panel/open_mall_extraction
+function yibextract:panel/close_mall_extraction
+
+function yibextract:panel/open_cave_extraction
+function yibextract:panel/close_cave_extraction
+
+function yibextract:panel/open_sewers_extraction
+function yibextract:panel/close_sewers_extraction

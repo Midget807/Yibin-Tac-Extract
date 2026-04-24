@@ -13,4 +13,4 @@ function yibextract:deployment/check_deploy_zone_safe
 
 #gtfo
 
-function yibextract:gtfo/update
+execute if score #active gtfo matches 1 run function yibextract:gtfo/update

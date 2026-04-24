@@ -4,36 +4,36 @@ execute as @a at @s if score #countdown gtfo matches 5999 run playsound minecraf
 
 #yes, i hardcoded all of it :)
 execute if score #countdown gtfo matches 4800 run execute as @a at @s run playsound minecraft:block.bell.use master @a ~ ~ ~ 1 0.5
-execute if score #countdown gtfo matches 4800 run tellraw @a ["",{"text":"\u26a0 [G.T.F.O] ","bold":true,"color":"yellow"},{"text":"Drone strike in 4 minutes.","color":"yellow"}]
+execute if score #countdown gtfo matches 4800 run tellraw @a ["",{"text":"\u26a0 [G.T.F.O.] ","bold":true,"color":"yellow"},{"text":"Drone strike in 4 minutes.","color":"yellow"}]
 
-execute if score #countdown gtfo matches 4780 run execute as @a at @s run playsound minecraft:block.note_block.hat master @a ~ ~ ~ 0.5 0.5
-execute if score #countdown gtfo matches 4760 run execute as @a at @s run playsound minecraft:block.note_block.hat master @a ~ ~ ~ 0.5 0.5
-execute if score #countdown gtfo matches 4740 run execute as @a at @s run playsound minecraft:block.note_block.hat master @a ~ ~ ~ 0.5 0.5
+execute if score #countdown gtfo matches 4780 run execute as @a at @s run playsound minecraft:block.note_block.hat master @a ~ ~ ~ 0.3 0.5
+execute if score #countdown gtfo matches 4760 run execute as @a at @s run playsound minecraft:block.note_block.hat master @a ~ ~ ~ 0.3 0.5
+execute if score #countdown gtfo matches 4740 run execute as @a at @s run playsound minecraft:block.note_block.hat master @a ~ ~ ~ 0.3 0.5
 
 execute if score #countdown gtfo matches 3600 run execute as @a at @s run playsound minecraft:block.bell.use master @a ~ ~ ~ 1 0.5
-execute if score #countdown gtfo matches 3600 run tellraw @a ["",{"text":"\u26a0 [G.T.F.O] ","bold":true,"color":"yellow"},{"text":"Drone strike in 3 minutes.","color":"gold"}]
+execute if score #countdown gtfo matches 3600 run tellraw @a ["",{"text":"\u26a0 [G.T.F.O.] ","bold":true,"color":"yellow"},{"text":"Drone strike in 3 minutes.","color":"gold"}]
 
-execute if score #countdown gtfo matches 3580 run execute as @a at @s run playsound minecraft:block.note_block.hat master @a ~ ~ ~ 0.5 0.5
-execute if score #countdown gtfo matches 3560 run execute as @a at @s run playsound minecraft:block.note_block.hat master @a ~ ~ ~ 0.5 0.5
-execute if score #countdown gtfo matches 3540 run execute as @a at @s run playsound minecraft:block.note_block.hat master @a ~ ~ ~ 0.5 0.5
+execute if score #countdown gtfo matches 3580 run execute as @a at @s run playsound minecraft:block.note_block.hat master @a ~ ~ ~ 0.3 0.5
+execute if score #countdown gtfo matches 3560 run execute as @a at @s run playsound minecraft:block.note_block.hat master @a ~ ~ ~ 0.3 0.5
+execute if score #countdown gtfo matches 3540 run execute as @a at @s run playsound minecraft:block.note_block.hat master @a ~ ~ ~ 0.3 0.5
 
 execute if score #countdown gtfo matches 2400 run execute as @a at @s run playsound minecraft:block.bell.use master @a ~ ~ ~ 1 0.5
-execute if score #countdown gtfo matches 2400 run tellraw @a ["",{"text":"\u26a0 [G.T.F.O] ","bold":true,"color":"yellow"},{"text":"Drone strike in 2 minutes.","color":"red"}]
+execute if score #countdown gtfo matches 2400 run tellraw @a ["",{"text":"\u26a0 [G.T.F.O.] ","bold":true,"color":"yellow"},{"text":"Drone strike in 2 minutes.","color":"red"}]
 
-execute if score #countdown gtfo matches 2380 run execute as @a at @s run playsound minecraft:block.note_block.hat master @a ~ ~ ~ 0.5 0.5
-execute if score #countdown gtfo matches 2360 run execute as @a at @s run playsound minecraft:block.note_block.hat master @a ~ ~ ~ 0.5 0.5
-execute if score #countdown gtfo matches 2340 run execute as @a at @s run playsound minecraft:block.note_block.hat master @a ~ ~ ~ 0.5 0.5
+execute if score #countdown gtfo matches 2380 run execute as @a at @s run playsound minecraft:block.note_block.hat master @a ~ ~ ~ 0.3 0.5
+execute if score #countdown gtfo matches 2360 run execute as @a at @s run playsound minecraft:block.note_block.hat master @a ~ ~ ~ 0.3 0.5
+execute if score #countdown gtfo matches 2340 run execute as @a at @s run playsound minecraft:block.note_block.hat master @a ~ ~ ~ 0.3 0.5
 
 execute if score #countdown gtfo matches 1200 run execute as @a at @s run playsound minecraft:block.bell.use master @a ~ ~ ~ 1 0.5
-execute if score #countdown gtfo matches 1200 run tellraw @a ["",{"text":"\u26a0 [G.T.F.O] ","bold":true,"color":"yellow"},{"text":"Drone strike in 1 minute.","color":"dark_red"}]
+execute if score #countdown gtfo matches 1200 run tellraw @a ["",{"text":"\u26a0 [G.T.F.O.] ","bold":true,"color":"yellow"},{"text":"Drone strike in 1 minute.","color":"dark_red"}]
 
-execute if score #countdown gtfo matches 1180 run execute as @a at @s run playsound minecraft:block.note_block.hat master @a ~ ~ ~ 0.5 0.5
-execute if score #countdown gtfo matches 1160 run execute as @a at @s run playsound minecraft:block.note_block.hat master @a ~ ~ ~ 0.5 0.5
-execute if score #countdown gtfo matches 1140 run execute as @a at @s run playsound minecraft:block.note_block.hat master @a ~ ~ ~ 0.5 0.5
+execute if score #countdown gtfo matches 1180 run execute as @a at @s run playsound minecraft:block.note_block.hat master @a ~ ~ ~ 0.3 0.5
+execute if score #countdown gtfo matches 1160 run execute as @a at @s run playsound minecraft:block.note_block.hat master @a ~ ~ ~ 0.3 0.5
+execute if score #countdown gtfo matches 1140 run execute as @a at @s run playsound minecraft:block.note_block.hat master @a ~ ~ ~ 0.3 0.5
 
-execute if score #countdown gtfo matches 400 run tellraw @a ["",{"text":"\u26a0 [G.T.F.O] ","bold":true,"color":"yellow"},{"text":"DRONE STRIKE IMMINENT.","color":"dark_red","bold":true}]
+execute if score #countdown gtfo matches 400 run tellraw @a ["",{"text":"\u26a0 [G.T.F.O.] ","bold":true,"color":"yellow"},{"text":"DRONE STRIKE IMMINENT.","color":"dark_red","bold":true}]
 
-execute if score #countdown gtfo matches 400 run execute as @a at @s run playsound minecraft:block.bell.use master @a ~ ~ ~ 1 0.5
+execute if score #countdown gtfo matches 400 run execute as @a at @s run playsound minecraft:block.bell.use master @a ~ ~ ~ 10 0.5
 
 execute if score #countdown gtfo matches 200 as @a[gamemode=adventure] if score @s inMap matches 1 run effect give @s blindness 30 1 true
 execute if score #countdown gtfo matches 200 as @a[gamemode=adventure] if score @s inMap matches 1 run effect give @s slowness 30 10 true
@@ -49,10 +49,20 @@ execute if score #countdown gtfo matches 62 as @a[gamemode=adventure] if score @
 execute if score #countdown gtfo matches 40 as @a[gamemode=adventure] if score @s inMap matches 1 run execute as @s at @s run playsound survival_instinct:explote_molotov master @s ~ ~ ~ 5 1 
 execute if score #countdown gtfo matches 25 as @a[gamemode=adventure] if score @s inMap matches 1 run execute as @s at @s run playsound survival_instinct:explote_molotov master @s ~ ~ ~ 5 0.7 
 execute if score #countdown gtfo matches 8 as @a[gamemode=adventure] if score @s inMap matches 1 run execute as @s at @s run playsound survival_instinct:explote_molotov master @s ~ ~ ~ 5 0.9 
-execute if score #countdown gtfo matches -17 as @a[gamemode=adventure] if score @s inMap matches 1 run execute as @s at @s run playsound survival_instinct:explote_molotov master @s ~ ~ ~ 5 0.8 
+execute if score #countdown gtfo matches 17 as @a[gamemode=adventure] if score @s inMap matches 1 run execute as @s at @s run playsound survival_instinct:explote_molotov master @s ~ ~ ~ 5 0.8 
 
 execute if score #countdown gtfo matches -20 as @a[gamemode=adventure] if score @s inMap matches 1 run kill @s
+execute if score #countdown gtfo matches -50 as @a[gamemode=adventure] if score @s inMap matches 1 run kill @s
+execute if score #countdown gtfo matches -80 as @a[gamemode=adventure] if score @s inMap matches 1 run kill @e[type=corpse:corpse]
+
+#disallow deployment until 5 minutes after the strike  
+execute if score #countdown gtfo matches 300 run function yibextract:panel/disallow_deployment
+execute if score #countdown gtfo matches -450 run tellraw @a {"text":"The drone strike has finished.","color":"aqua"}
+execute if score #countdown gtfo matches -500 run tellraw @a ["",{"text":"It will be safe to deploy again in ","color":"aqua"},{"text":"5 Minutes","bold":true,"color":"aqua"},{"text":". ","color":"aqua"}]
+execute if score #countdown gtfo matches -4100 run tellraw @a ["",{"text":"It will be safe to deploy again in ","color":"aqua"},{"text":"2 Minutes","bold":true,"color":"aqua"},{"text":". ","color":"aqua"}]
+execute if score #countdown gtfo matches -6500 run function yibextract:panel/allow_deployment
 
 #reset
-execute if score #countdown gtfo matches -100 run scoreboard players set #active gtfo 0
-execute if score #countdown gtfo matches -100 run scoreboard players set #countdown gtfo 6000
+execute if score #countdown gtfo matches -6500 run scoreboard players set #active gtfo 0
+execute if score #countdown gtfo matches -6500 run scoreboard players set #countdown gtfo 6000
+execute if score #countdown gtfo matches -6500 run scoreboard players set #countdown gtfo 6000

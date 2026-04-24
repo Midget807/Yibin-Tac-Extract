@@ -1,8 +1,14 @@
 #set isdeploying if in the deploy box
 # execute as @a[team=green] unless score @s inDeployBox matches 1 run scoreboard players set @s isDeploying 0
-execute as @a[team=green] if score @s inDeployBox matches 1 unless score @s inMap matches 1 run scoreboard players set @s isDeploying 1
+execute as @a[team=green] if score #canDeploy canDeploy matches 1 unless score @s inMap matches 1 if score @s inDeployBox matches 1 run scoreboard players set @s isDeploying 1
 scoreboard players set #green isDeploying 0
-execute as @a[team=green] if score @s isDeploying matches 1 run scoreboard players set #green isDeploying 1
+execute as @a[team=green] if score #canDeploy canDeploy matches 1 unless score @s inMap matches 1 if score @s isDeploying matches 1 run scoreboard players set #green isDeploying 1
+
+#warn if candeploy is zero
+execute as @a[team=green] unless score #canDeploy canDeploy matches 1 unless score @s inMap matches 1 if score @s inDeployBox matches 1 if score #shittyrng shittyrng matches 1 run title @s actionbar {"text":"You cannot deploy right now.","color":"gold"}
+
+#throw error if player's inmap is 1 
+execute as @a[team=green] if score @s inMap matches 1 if score @s inDeployBox matches 1 if score #shittyrng shittyrng matches 1 run tellraw @s {"text":"ERROR: CANNOT DEPLOY - your inMap value is 1.","color":"red"}
 
 #tick timer
 execute unless score #green isDeploying matches 1 run scoreboard players operation #green extractSecondsLS = #ticksToDeploy constants
@@ -35,5 +41,6 @@ execute as @a[team=green, tag=!UnableToTp] if score @s inDeployBox matches 1 if 
 execute as @a[team=green, tag=!UnableToTp] if score @s inDeployBox matches 1 if score #green deploySeconds matches 0 run effect give @s blindness 1 10 true
 execute as @a[team=green, tag=!UnableToTp] if score @s inDeployBox matches 1 if score #green deploySeconds matches 0 at @s run playsound minecraft:entity.evoker.prepare_summon master @a ~ ~ ~ 0.5 1
 execute as @a[team=green, tag=!UnableToTp] if score @s inDeployBox matches 1 if score #green deploySeconds matches 0 run title @s actionbar [{"text":"YOU HAVE BEEN DEPLOYED","color":"red","bold":true}]
+execute as @a[team=green, tag=!UnableToTp] if score @s inDeployBox matches 1 if score #green deploySeconds matches 0 run scoreboard players add #shittyrng shittyrng 4
 execute as @a[team=green, tag=!UnableToTp] if score @s inDeployBox matches 1 if score #green deploySeconds matches 0 run scoreboard players set @s inMap 1
 execute as @a[team=green, tag=!UnableToTp] if score @s inDeployBox matches 1 if score #green deploySeconds matches 0 run schedule function yibextract:deployment/send_feedback_green 1t

@@ -14,6 +14,9 @@ scoreboard players set #yellow isDeploying 0
 scoreboard players set #green isDeploying 0
 scoreboard players set #blue isDeploying 0
 
+scoreboard objectives add canDeploy dummy
+scoreboard players set #canDeploy canDeploy 1
+
 #timers
 scoreboard objectives add deployTicks dummy
 scoreboard objectives add deploySecondsB dummy

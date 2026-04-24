@@ -6,3 +6,5 @@ scoreboard objectives add extractTicks dummy
 scoreboard objectives add extractSecondsB dummy
 scoreboard objectives add extractSeconds dummy
 scoreboard objectives add extractSecondsLS dummy
+
+scoreboard objectives add openExtractZones dummy
