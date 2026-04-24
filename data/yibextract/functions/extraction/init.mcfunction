@@ -1,5 +1,3 @@
-say Initiating extraction logic...
-
 scoreboard objectives add isExtracting dummy
 scoreboard objectives add inExtractBox dummy
 scoreboard objectives add extractTicks dummy

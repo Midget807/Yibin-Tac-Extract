@@ -1,0 +1,2 @@
+function yibextract:panel/shuffle_extraction_points
+schedule function yibextract:clock/extract_point_clock 600s

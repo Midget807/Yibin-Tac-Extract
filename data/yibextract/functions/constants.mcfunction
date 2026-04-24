@@ -19,6 +19,10 @@ scoreboard players operation #buffer constants = #secondsToDeploy constants
 scoreboard players operation #buffer constants *= #20 constants
 scoreboard players operation #ticksToDeploy constants = #buffer constants
 
-#used for both extraction and deployment so it goes here 
+#initialise inmap
 scoreboard objectives add inMap dummy
 scoreboard players add @a inMap 0
+
+#initialise shittyrng
+scoreboard objectives add shittyrng dummy
+scoreboard players set #shittyrng shittyrng 1

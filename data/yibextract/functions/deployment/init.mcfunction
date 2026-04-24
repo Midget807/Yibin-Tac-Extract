@@ -1,10 +1,3 @@
-say Initiating deployment logic...
-
-#initialise shittyrng
-
-scoreboard objectives add shittyrng dummy
-scoreboard players set #shittyrng shittyrng 1
-
 #deploy zone occupation status
 
 scoreboard objectives add isDeploying dummy

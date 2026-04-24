@@ -51,6 +51,15 @@ execute if score #countdown gtfo matches 25 as @a[gamemode=adventure] if score @
 execute if score #countdown gtfo matches 8 as @a[gamemode=adventure] if score @s inMap matches 1 run execute as @s at @s run playsound survival_instinct:explote_molotov master @s ~ ~ ~ 5 0.9 
 execute if score #countdown gtfo matches 17 as @a[gamemode=adventure] if score @s inMap matches 1 run execute as @s at @s run playsound survival_instinct:explote_molotov master @s ~ ~ ~ 5 0.8 
 
+#everyone deserves the privledge of hearing the drone strike
+execute if score #countdown gtfo matches 290 as @a unless score @s inMap matches 1 run execute as @s at @s run playsound minecraft:entity.ender_dragon.death master @s ~ ~ ~ 0.05 0.5 
+execute if score #countdown gtfo matches 260 as @a unless score @s inMap matches 1 run execute as @s at @s run playsound minecraft:entity.ender_dragon.death master @s ~ ~ ~ 0.07 0.7 
+execute if score #countdown gtfo matches 240 as @a unless score @s inMap matches 1 run execute as @s at @s run playsound minecraft:entity.ender_dragon.death master @s ~ ~ ~ 0.1 0.65 
+execute if score #countdown gtfo matches 220 as @a unless score @s inMap matches 1 run execute as @s at @s run playsound minecraft:entity.ender_dragon.death master @s ~ ~ ~ 0.1 0.6 
+
+execute if score #countdown gtfo matches 290 as @a unless score @s inMap matches 1 run execute as @s run tellraw @s ["",{"text":"The drone strike is underway. ","color":"dark_red"},{"text":"Thankfully, you are safe.","italic":true,"color":"gray"}]
+
+#die die die
 execute if score #countdown gtfo matches -20 as @a[gamemode=adventure] if score @s inMap matches 1 run kill @s
 execute if score #countdown gtfo matches -50 as @a[gamemode=adventure] if score @s inMap matches 1 run kill @s
 execute if score #countdown gtfo matches -80 as @a[gamemode=adventure] if score @s inMap matches 1 run kill @e[type=corpse:corpse]
@@ -66,9 +75,6 @@ execute if score #countdown gtfo matches -500 run tellraw @a ["",{"text":"It wil
 execute if score #countdown gtfo matches -4100 run tellraw @a ["",{"text":"It will be safe to deploy again in ","color":"aqua"},{"text":"2 Minutes","bold":true,"color":"aqua"},{"text":". ","color":"aqua"}]
 execute if score #countdown gtfo matches -6400 run function yibextract:panel/allow_deployment
 
-execute if score #countdown gtfo matches -6450 run function yibextract:panel/shuffle_extraction_points
-
 #reset
-execute if score #countdown gtfo matches -6500 run scoreboard players set #active gtfo 0
-execute if score #countdown gtfo matches -6500 run scoreboard players set #countdown gtfo 6000
-execute if score #countdown gtfo matches -6500 run scoreboard players set #countdown gtfo 6000
+execute if score #countdown gtfo matches -6500 run function yibextract:clock/start_clock 
+execute if score #countdown gtfo matches -6500 run function yibextract:gtfo/init 

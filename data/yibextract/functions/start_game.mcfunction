@@ -18,5 +18,8 @@ tellraw @a {"text":"Starting session...","bold":true,"color":"light_purple"}
 
 #restock all zones here
 
-schedule function yibextract:panel/shuffle_extraction_points 1t
+#reset the gtfo event if it is running
+function yibextract:gtfo/init 
+
+function yibextract:clock/start_clock
 schedule function yibextract:panel/allow_deployment 1t
