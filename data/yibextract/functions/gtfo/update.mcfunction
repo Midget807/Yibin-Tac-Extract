@@ -62,7 +62,7 @@ execute if score #countdown gtfo matches 260 as @a unless score @s inMap matches
 #die die die
 execute if score #countdown gtfo matches -20 as @a[gamemode=adventure] if score @s inMap matches 1 run kill @s
 execute if score #countdown gtfo matches -50 as @a[gamemode=adventure] if score @s inMap matches 1 run kill @s
-execute if score #countdown gtfo matches -80 as @a[gamemode=adventure] if score @s inMap matches 1 run kill @e[type=corpse:corpse]
+execute if score #countdown gtfo matches -80 run kill @e[type=corpse:corpse]
 
 execute if score #countdown gtfo matches 100 run function yibextract:panel/close_mall_extraction
 execute if score #countdown gtfo matches 80 run function yibextract:panel/close_sewers_extraction
@@ -70,11 +70,14 @@ execute if score #countdown gtfo matches 60 run function yibextract:panel/close_
 
 #disallow deployment until 5 minutes after the strike  
 execute if score #countdown gtfo matches 300 run function yibextract:panel/disallow_deployment
-execute if score #countdown gtfo matches -450 run tellraw @a {"text":"The drone strike has finished.","color":"aqua"}
-execute if score #countdown gtfo matches -500 run tellraw @a ["",{"text":"It will be safe to deploy again in ","color":"aqua"},{"text":"5 Minutes","bold":true,"color":"aqua"},{"text":". ","color":"aqua"}]
-execute if score #countdown gtfo matches -4100 run tellraw @a ["",{"text":"It will be safe to deploy again in ","color":"aqua"},{"text":"2 Minutes","bold":true,"color":"aqua"},{"text":". ","color":"aqua"}]
-execute if score #countdown gtfo matches -6400 run function yibextract:panel/allow_deployment
+execute unless score #stopGame constants matches 1 if score #countdown gtfo matches -450 run tellraw @a {"text":"The drone strike has finished.","color":"aqua"}
+execute unless score #stopGame constants matches 1 if score #countdown gtfo matches -500 run tellraw @a ["",{"text":"It will be safe to deploy again in ","color":"aqua"},{"text":"5 Minutes","bold":true,"color":"aqua"},{"text":". ","color":"aqua"}]
+execute unless score #stopGame constants matches 1 if score #countdown gtfo matches -4100 run tellraw @a ["",{"text":"It will be safe to deploy again in ","color":"aqua"},{"text":"2 Minutes","bold":true,"color":"aqua"},{"text":". ","color":"aqua"}]
+execute unless score #stopGame constants matches 1 if score #countdown gtfo matches -6400 run function yibextract:panel/allow_deployment
 
 #reset
-execute if score #countdown gtfo matches -6500 run function yibextract:clock/start_clock 
-execute if score #countdown gtfo matches -6500 run function yibextract:gtfo/init 
+execute unless score #stopGame constants matches 1 if score #countdown gtfo matches -6500 run function yibextract:clock/start_clock 
+execute unless score #stopGame constants matches 1 if score #countdown gtfo matches -6500 run function yibextract:gtfo/init 
+
+#if stop_game via gfto was run:
+execute if score #stopGame constants matches 1 if score #countdown gtfo matches -200 run function yibextract:force_stop_game

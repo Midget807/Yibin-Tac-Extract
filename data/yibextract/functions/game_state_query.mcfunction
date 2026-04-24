@@ -1,0 +1,3 @@
+execute if score #gameRunning constants matches 1 unless score #stopGame constants matches 1 run tellraw @s {"text":"\nDEBUG: The session is currently running.\n","color":"green"}
+execute if score #gameRunning constants matches 1 if score #stopGame constants matches 1 run tellraw @s {"text":"\nDEBUG: The session will end after this event.\n","color":"gold"}
+execute unless score #gameRunning constants matches 1 run tellraw @s {"text":"\nDEBUG: The session is currently stopped.\n","color":"red"}

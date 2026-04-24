@@ -1,4 +1,5 @@
 scoreboard players set #gameRunning constants 1 
+scoreboard players set #stopGame constants 0
 
 #silently close all extract points (i have my reasons for doing this, trust) 
 scoreboard players set #mall openExtractZones 0
