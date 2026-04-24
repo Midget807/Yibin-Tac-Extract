@@ -55,12 +55,18 @@ execute if score #countdown gtfo matches -20 as @a[gamemode=adventure] if score 
 execute if score #countdown gtfo matches -50 as @a[gamemode=adventure] if score @s inMap matches 1 run kill @s
 execute if score #countdown gtfo matches -80 as @a[gamemode=adventure] if score @s inMap matches 1 run kill @e[type=corpse:corpse]
 
+execute if score #countdown gtfo matches 100 run function yibextract:panel/close_mall_extraction
+execute if score #countdown gtfo matches 80 run function yibextract:panel/close_sewers_extraction
+execute if score #countdown gtfo matches 60 run function yibextract:panel/close_cave_extraction
+
 #disallow deployment until 5 minutes after the strike  
 execute if score #countdown gtfo matches 300 run function yibextract:panel/disallow_deployment
 execute if score #countdown gtfo matches -450 run tellraw @a {"text":"The drone strike has finished.","color":"aqua"}
 execute if score #countdown gtfo matches -500 run tellraw @a ["",{"text":"It will be safe to deploy again in ","color":"aqua"},{"text":"5 Minutes","bold":true,"color":"aqua"},{"text":". ","color":"aqua"}]
 execute if score #countdown gtfo matches -4100 run tellraw @a ["",{"text":"It will be safe to deploy again in ","color":"aqua"},{"text":"2 Minutes","bold":true,"color":"aqua"},{"text":". ","color":"aqua"}]
-execute if score #countdown gtfo matches -6500 run function yibextract:panel/allow_deployment
+execute if score #countdown gtfo matches -6400 run function yibextract:panel/allow_deployment
+
+execute if score #countdown gtfo matches -6450 run function yibextract:panel/shuffle_extraction_points
 
 #reset
 execute if score #countdown gtfo matches -6500 run scoreboard players set #active gtfo 0
