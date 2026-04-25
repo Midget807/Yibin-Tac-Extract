@@ -2,6 +2,11 @@
 
 scoreboard objectives add isDeploying dummy
 
+team add red
+team add blue
+team add yellow
+team add green
+
 scoreboard players set #red isDeploying 0
 scoreboard players set #yellow isDeploying 0
 scoreboard players set #green isDeploying 0
