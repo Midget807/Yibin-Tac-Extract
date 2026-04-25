@@ -19,12 +19,30 @@ scoreboard objectives add inDeployBox dummy
 # map deploy zones
 scoreboard objectives add safeMapDeployZones dummy
 kill @e[type=minecraft:armor_stand, tag=MapDeployZone]
-summon minecraft:armor_stand -143 60 -76 {Invulnerable:1b, NoGravity:1b, Invisible:1b, Tags:["MapDeployZone", "TrackNorth"]}
-summon minecraft:armor_stand -131 60 -76 {Invulnerable:1b, NoGravity:1b, Invisible:1b, Tags:["MapDeployZone", "TrackSouth"]}
-summon minecraft:armor_stand -119 60 -76 {Invulnerable:1b, NoGravity:1b, Invisible:1b, Tags:["MapDeployZone", "StationNorth"]}
-summon minecraft:armor_stand -103 60 -76 {Invulnerable:1b, NoGravity:1b, Invisible:1b, Tags:["MapDeployZone", "StationSouth"]}
-summon minecraft:armor_stand -143 60 -64 {Invulnerable:1b, NoGravity:1b, Invisible:1b, Tags:["MapDeployZone", "Sewer"]}
-summon minecraft:armor_stand -131 60 -64 {Invulnerable:1b, NoGravity:1b, Invisible:1b, Tags:["MapDeployZone", "Tunnel"]}
-summon minecraft:armor_stand -119 60 -64 {Invulnerable:1b, NoGravity:1b, Invisible:1b, Tags:["MapDeployZone", "Shaft"]}
-summon minecraft:armor_stand -103 60 -64 {Invulnerable:1b, NoGravity:1b, Invisible:1b, Tags:["MapDeployZone", "Abandoned"]}
+
+#Track north -159 -41 -22
+summon minecraft:armor_stand -159 -41 -22 {Invulnerable:1b, NoGravity:1b, Invisible:1b, Tags:["MapDeployZone", "TrackNorth"]}
+
+#Track south -159 -41 115 
+summon minecraft:armor_stand -159 -41 115 {Invulnerable:1b, NoGravity:1b, Invisible:1b, Tags:["MapDeployZone", "TrackSouth"]}
+
+#Station north -138 -29 4
+summon minecraft:armor_stand -138 -29 4 {Invulnerable:1b, NoGravity:1b, Invisible:1b, Tags:["MapDeployZone", "StationNorth"]}
+
+#Station south -168 -25 87
+summon minecraft:armor_stand -168 -25 87 {Invulnerable:1b, NoGravity:1b, Invisible:1b, Tags:["MapDeployZone", "StationSouth"]}
+
+#sewer -122 -46 86
+summon minecraft:armor_stand -122 -46 86 {Invulnerable:1b, NoGravity:1b, Invisible:1b, Tags:["MapDeployZone", "Sewer"]}
+
+#rat tunnel -99 -30 51
+summon minecraft:armor_stand -99 -30 51 {Invulnerable:1b, NoGravity:1b, Invisible:1b, Tags:["MapDeployZone", "Tunnel"]}
+
+#elevator shaft -141 -21 31
+summon minecraft:armor_stand -141 -21 31 {Invulnerable:1b, NoGravity:1b, Invisible:1b, Tags:["MapDeployZone", "Shaft"]}
+
+# abandoned train tunnel -64 -38 57
+summon minecraft:armor_stand -64 -38 57 {Invulnerable:1b, NoGravity:1b, Invisible:1b, Tags:["MapDeployZone", "Abandoned"]}
+
+
 scoreboard players add @e[type=minecraft:armor_stand, tag=MapDeployZone] safeMapDeployZones 0

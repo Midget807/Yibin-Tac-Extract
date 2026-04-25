@@ -9,4 +9,4 @@ execute if score #savedShittyrng shittyrng < #savedgtfoChance constants run func
 
 execute unless score #savedShittyrng shittyrng < #savedgtfoChance constants run scoreboard players add #gtfoChance constants 3
 execute unless score #savedShittyrng shittyrng < #savedgtfoChance constants run function yibextract:gtfo/gtfo_index
-execute unless score #savedShittyrng shittyrng < #savedgtfoChance constants run schedule function yibextract:clock/gtfo_clock 600s
+execute unless score #savedShittyrng shittyrng < #savedgtfoChance constants run schedule function yibextract:clock/gtfo_clock 180s
