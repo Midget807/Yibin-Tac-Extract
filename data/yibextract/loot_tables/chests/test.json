@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:entity", 
+  "pools": [
+    {
+      "rolls": 1, 
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "lrtactical:throwable", 
+          "weight": 1, 
+          "functions": [
+            {
+                "function": "minecraft:set_nbt",
+                "tag": "{ThrowableId:\"lrtactical:smoke_grenade\"}"
+
+            }    
+          ]
+        }
+      ]
+    }
+  ]
+}
