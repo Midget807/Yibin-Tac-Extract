@@ -9,6 +9,7 @@ scoreboard players set #9 constants 9
 scoreboard players set #18 constants 18
 scoreboard players set #3 constants 3
 scoreboard players set #1 constants 1
+scoreboard players set #0 constants 0
 
 #derive ticksToExtract from secondsToExtract
 scoreboard players operation #buffer constants = #secondsToExtract constants
@@ -27,3 +28,4 @@ scoreboard players add @a inMap 0
 #initialise shittyrng
 scoreboard objectives add shittyrng dummy
 scoreboard players set #shittyrng shittyrng 1
+ 

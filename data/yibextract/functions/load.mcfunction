@@ -13,6 +13,8 @@ scoreboard players set #canDeploy canDeploy 0
 scoreboard players set #stopGame constants 0 
 scoreboard players set #gameRunning constants 0 
 
-tellraw @a [{"text":"Datapacks loaded","color":"yellow","bold":true}]
+scoreboard objectives add freekit trigger
+scoreboard objectives add freekitCoolDown dummy
 
+tellraw @a [{"text":"Datapacks loaded","color":"yellow","bold":true}]
 tellraw @a [{"text":"\nStart the session with /function yibextract:start_game\n","color":"aqua"}]
