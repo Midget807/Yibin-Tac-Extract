@@ -6,3 +6,6 @@ scoreboard objectives add extractSeconds dummy
 scoreboard objectives add extractSecondsLS dummy
 
 scoreboard objectives add openExtractZones dummy
+
+schedule clear yibextract:deployment/decrement_deploycooldown
+schedule function yibextract:deployment/decrement_deploycooldown 1s

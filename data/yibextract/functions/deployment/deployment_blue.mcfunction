@@ -1,8 +1,8 @@
 #set isdeploying if in the deploy box
 # execute as @a[team=blue] unless score @s inDeployBox matches 1 run scoreboard players set @s isDeploying 0
-execute as @a[team=blue] if score #canDeploy canDeploy matches 1 unless score @s inMap matches 1 if score @s inDeployBox matches 1 run scoreboard players set @s isDeploying 1
+execute as @a[team=blue] if score #canDeploy canDeploy matches 1 unless score @s deployCoolDown > #0 constants unless score @s inMap matches 1 if score @s inDeployBox matches 1 run scoreboard players set @s isDeploying 1
 scoreboard players set #blue isDeploying 0
-execute as @a[team=blue] if score #canDeploy canDeploy matches 1 unless score @s inMap matches 1 if score @s isDeploying matches 1 run scoreboard players set #blue isDeploying 1
+execute as @a[team=blue] if score #canDeploy canDeploy matches 1 unless score @s deployCoolDown > #0 constants unless score @s inMap matches 1 if score @s isDeploying matches 1 run scoreboard players set #blue isDeploying 1
 
 #warn if candeploy is zero
 execute as @a[team=blue] unless score #canDeploy canDeploy matches 1 unless score @s inMap matches 1 if score @s inDeployBox matches 1 if score #shittyrng shittyrng matches 1 run title @s actionbar {"text":"You cannot deploy right now.","color":"gold"}
@@ -39,7 +39,8 @@ execute as @a[team=blue] if score @s inDeployBox matches 0 if score #blue deploy
 #effects and feedback deploy
 execute as @a[team=blue, tag=!UnableToTp] if score @s inDeployBox matches 1 if score #blue deploySeconds matches 0 run scoreboard players set @s isDeploying 0
 execute as @a[team=blue, tag=!UnableToTp] if score @s inDeployBox matches 1 if score #blue deploySeconds matches 0 run effect give @s blindness 1 10 true
-execute as @a[team=blue, tag=!UnableToTp] if score @s inDeployBox matches 1 if score #blue deploySeconds matches 0 at @s run playsound minecraft:entity.evoker.prepare_summon master @a ~ ~ ~ 0.5 1
+execute as @a[team=blue, tag=!UnableToTp] if score @s inDeployBox matches 1 if score #blue deploySeconds matches 0 run tag @s add sfxbugfix
+execute as @a[team=blue, tag=!UnableToTp] if score @s inDeployBox matches 1 if score #blue deploySeconds matches 0 run schedule function yibextract:inmap/sfxbugfix 2t
 execute as @a[team=blue, tag=!UnableToTp] if score @s inDeployBox matches 1 if score #blue deploySeconds matches 0 run title @s actionbar [{"text":"YOU HAVE BEEN DEPLOYED","color":"red","bold":true}]
 execute as @a[team=blue, tag=!UnableToTp] if score @s inDeployBox matches 1 if score #blue deploySeconds matches 0 run scoreboard players add #shittyrng shittyrng 1
 execute as @a[team=blue, tag=!UnableToTp] if score @s inDeployBox matches 1 if score #blue deploySeconds matches 0 run scoreboard players set @s inMap 1

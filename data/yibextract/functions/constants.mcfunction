@@ -3,6 +3,9 @@ scoreboard objectives add constants dummy
 #secondsToExtract and secondsToDeploy should be one higher than what you want it to be since division rounds down
 scoreboard players set #secondsToExtract constants 36
 scoreboard players set #secondsToDeploy constants 11
+scoreboard players set #respiteSeconds constants 180
+#if you're changing respiteseconds you also need to change the "successfuly extracted" message in decrement_deploycooldown 
+#since the "3 minutes" is hardcoded there, though that's purely visual . i am just lazy
 
 scoreboard players set #20 constants 20
 scoreboard players set #9 constants 9

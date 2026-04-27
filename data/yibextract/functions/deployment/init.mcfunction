@@ -21,6 +21,10 @@ scoreboard objectives add deploySecondsB dummy
 scoreboard objectives add deploySeconds dummy
 scoreboard objectives add inDeployBox dummy
 
+#deploy cooldown
+scoreboard objectives add deployCoolDown dummy
+
+
 # map deploy zones
 scoreboard objectives add safeMapDeployZones dummy
 kill @e[type=minecraft:armor_stand, tag=MapDeployZone]
