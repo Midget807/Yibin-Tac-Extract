@@ -24,3 +24,7 @@ function yibextract:inmap/enforce_inmap
 #freekit
 
 function yibextract:freekit/update
+
+#vaults
+
+function yibextract:vaults/update

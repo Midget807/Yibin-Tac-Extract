@@ -3,6 +3,7 @@ function yibextract:extraction/init
 function yibextract:deployment/init
 function yibextract:gtfo/init
 function yibextract:clock/stop_clock
+function yibextract:vaults/init
 
 #(silently) close all extract points and disallow deploying
 scoreboard players set #mall openExtractZones 0
