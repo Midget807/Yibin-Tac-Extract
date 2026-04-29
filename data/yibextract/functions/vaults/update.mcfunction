@@ -24,7 +24,7 @@ execute if block -167 -25 32 create:redstone_link[powered= true] if score #mall 
 
 #clear
 execute if block -167 -25 32 create:redstone_link[powered= true] if score #mall openedVaults matches 0 positioned -167 -25 32 as @a[sort=nearest,limit=1,nbt={SelectedItem:{id:"minecraft:tripwire_hook"}}] run clear @s minecraft:tripwire_hook 1
-execute if block -167 -25 32 create:redstone_link[powered= true] if score #mall openedVaults matches 0 players set #mall openedVaults 1
+execute if block -167 -25 32 create:redstone_link[powered= true] if score #mall openedVaults matches 0 run scoreboard players set #mall openedVaults 1
 
 
 
