@@ -73,6 +73,8 @@ execute if score #countdown gtfo matches 300 run function yibextract:panel/disal
 execute unless score #stopGame constants matches 1 if score #countdown gtfo matches -200 run tellraw @a {"text":"The drone strike has finished.","color":"aqua"}
 execute unless score #stopGame constants matches 1 if score #countdown gtfo matches -250 run tellraw @a ["",{"text":"It will be safe to deploy again in ","color":"aqua"},{"text":"5 Minutes","bold":true,"color":"aqua"},{"text":". ","color":"aqua"}]
 execute unless score #stopGame constants matches 1 if score #countdown gtfo matches -4100 run tellraw @a ["",{"text":"It will be safe to deploy again in ","color":"aqua"},{"text":"2 Minutes","bold":true,"color":"aqua"},{"text":". ","color":"aqua"}]
+execute unless score #stopGame constants matches 1 if score #countdown gtfo matches -6000 run execute as @a at @s run playsound create:desk_bell master @s ~ ~ ~ 1 1.5
+execute unless score #stopGame constants matches 1 if score #countdown gtfo matches -6000 run function yibextract:restock_map
 execute unless score #stopGame constants matches 1 if score #countdown gtfo matches -6400 run function yibextract:panel/allow_deployment
 
 #reset

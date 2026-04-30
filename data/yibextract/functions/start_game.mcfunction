@@ -17,10 +17,10 @@ schedule clear yibextract:panel/close_cave_extraction
 #repoen extract points and allow deployment
 tellraw @a {"text":"Starting session...","bold":true,"color":"light_purple"}
 
-#restock all zones here
+function yibextract:restock_map
 
 #reset the gtfo event if it is running
 function yibextract:gtfo/init 
 
 function yibextract:clock/start_clock
-schedule function yibextract:panel/allow_deployment 1t
+schedule function yibextract:panel/allow_deployment 1s
