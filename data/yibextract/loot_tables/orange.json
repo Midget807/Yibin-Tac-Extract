@@ -21,7 +21,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "survival_instinct:milk",
+          "name": "survival_instinct:meat_can",
           "weight": 1,
           "functions": [
             {
